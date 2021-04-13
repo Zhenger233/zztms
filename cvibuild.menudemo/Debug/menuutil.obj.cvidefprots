@@ -1,0 +1,52 @@
+[MU_MakeShortFileName]
+Class="Function"
+Prototype="char *MU_MakeShortFileName(char *userOutBuf, char *userInBuf, int max);"
+
+[MU_CreateMenuList]
+Class="Function"
+Prototype="int MU_CreateMenuList(int menuBarHandle, int menuID, int beforeMenuItemID, int maxItems, void (*callbackFunc)(int, int, int, void *));"
+
+[MU_GetNumMenuListItems]
+Class="Function"
+Prototype="int MU_GetNumMenuListItems(int handle);"
+
+[MU_DeleteMenuList]
+Class="Function"
+Prototype="int MU_DeleteMenuList(int handle);"
+
+[MU_DeleteMenuListItem]
+Class="Function"
+Prototype="int MU_DeleteMenuListItem(int handle, int index);"
+
+[MU_AddItemToMenuList]
+Class="Function"
+Prototype="int MU_AddItemToMenuList(int handle, int index, char *menuItemName, void *callbackData);"
+
+[MU_PutFileListInIniFile]
+Class="Function"
+Prototype="int MU_PutFileListInIniFile(int menuListHandle, struct IniStructForwardReferenceTag *iniTextHandle, char *sectionName, char *tagPrefix, int useCallbackDataAsTagName);"
+
+[MU_GetFileListFromIniFile]
+Class="Function"
+Prototype="int MU_GetFileListFromIniFile(int menuListHandle, struct IniStructForwardReferenceTag *iniTextHandle, char *sectionName, char *tagPrefix, int flags);"
+
+[MU_WriteRegistryInfo]
+Class="Function"
+Prototype="int MU_WriteRegistryInfo(struct IniStructForwardReferenceTag *iniTextHandle, char *registryName);"
+
+[MU_ReadRegistryInfo]
+Class="Function"
+Prototype="int MU_ReadRegistryInfo(struct IniStructForwardReferenceTag *iniTextHandle, char *registryName);"
+
+[MU_GetMenuListAttribute]
+Class="Function"
+Prototype="int MU_GetMenuListAttribute(int handle, int index, int attribute, void *value);"
+
+[MU_SetMenuListAttribute]
+Class="Function"
+Prototype="int MU_SetMenuListAttribute(int handle, int index, int attribute, ...);"
+
+[MU_SetMenuListAttributeFromParmInfo]
+Class="Function"
+Prototype="int MU_SetMenuListAttributeFromParmInfo(int handle, int index, int attribute, char *parmInfo);"
+
