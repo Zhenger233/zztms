@@ -31,11 +31,22 @@ HDRS = 	"C:\\Users\\Public\\Documents\\National Instruments\\TestStand 2019 (32-
 	"c:\\ProgramData\\National Instruments\\CVI2017\\bin"
 	"d:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\Bin"
 	;
+include Jamfile_instr ;
 LOCATE on "menudemo.c" = "c:\\Users\\Zhenger\\Desktop\\ts\\try" ;
 LOCATE on "menudemo.h" = "c:\\Users\\Zhenger\\Desktop\\ts\\try" ;
+Object "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\menudemo.obj" : "c:\\Users\\Zhenger\\Desktop\\ts\\try\\menudemo.c" ;
+FILENUM on "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\menudemo.obj" = 1 ;
+DEFPROTS on "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\menudemo.obj" = "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\menudemo.obj.cvidefprots" ;
+OUTFILE on "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\menudemo.obj" = "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\menudemo.obj.out" ;
+PrjObjects += "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\menudemo.obj" ;
 Object "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\menuutil.obj" : "d:\\Program Files (x86)\\National Instruments\\CVI2017\\toolslib\\toolbox\\menuutil.c" ;
-FILENUM on "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\menuutil.obj" = 1 ;
+FILENUM on "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\menuutil.obj" = 2 ;
 DEFPROTS on "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\menuutil.obj" = "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\menuutil.obj.cvidefprots" ;
 OUTFILE on "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\menuutil.obj" = "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\menuutil.obj.out" ;
-PrjObjects += "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\menuutil.obj" ;
-Depends all : $(PrjObjects) ;
+InstrObjects += "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\menuutil.obj" ;
+Object "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\resources.res" : "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\resources.in.rc" ;
+Depends "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\resources.res" : "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\manifest.xml" ;
+MainFromObjects "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\menudemo_dbg.exe" : $(PrjObjects) $(InstrObjects) ;
+Depends "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\menudemo_dbg.exe" : "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\link_options.txt" ;
+Depends "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\menudemo_dbg.exe" : "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\resources.res" ;
+Depends all : "c:\\Users\\Zhenger\\Desktop\\ts\\try\\cvibuild.menudemo\\Debug\\menudemo_dbg.exe" ;
